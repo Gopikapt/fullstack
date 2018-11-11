@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head><script src="js/script.js"></script>
+<body>
+    <div class="container">
+        <form>
+        <div class="row">
+            <div class="col-sm-6">Name</div>
+            <div class="col-sm-6"><input type="text" class="form" id="getname"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Roll no</div>
+            <div class="col-sm-6"><input type="number" class="form control" id="getrno"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Semester</div>
+            <div class="col-sm-6">
+                <select id="getsem">
+                    <option>S1</option>
+                    <option>S2</option>
+                    <option>S3</option>
+                    <option>S4</option>
+                    <option>S5</option>
+                    <option>S6</option>
+                </select>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">College</div>
+            <div class="col-sm-6"><input type="text" class="form control" id="getclg"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub1</div>
+            <div class="col-sm-6"><input type="text" class="form control" id="getsub1"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub1 marks</div>
+            <div class="col-sm-6"><input type="number" class="form control" id="getm1"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub1 Total</div>
+            <div class="col-sm-6"><input type="number" class="form control" id="gett1"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub2</div>
+            <div class="col-sm-6"><input type="text" class="form control" id="getsub2"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub2 marks</div>
+            <div class="col-sm-6"><input type="number" class="form control" id="getm2"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub2 Total</div>
+            <div class="col-sm-6"><input type="number" class="form control" id="gett2"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub3</div>
+            <div class="col-sm-6"><input type="text" class="form control" id="getsub3"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub3 marks</div>
+            <div class="col-sm-6"><input type="number" class="form control" id="getm3"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub3 Total</div>
+            <div class="col-sm-6"><input type="number" class="form control" id="gett3"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub4</div>
+            <div class="col-sm-6"><input type="text" class="form control" id="getsub4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub4 marks</div>
+            <div class="col-sm-6"><input type="number" class="form control" id="getm4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">Sub4 Total</div>
+            <div class="col-sm-6"><input type="number" class="form control" id="gett4"></div>
+        </div><br>
+        <div class="row">
+                <div class="col-sm-6"></div>
+            <div class="col-sm-6"><input type="button" value="GENERATE MARKLIST" class="btn-dark" onclick="Stud();"></div>
+        </div>    
+    </form>
+</div>
+<div class="container">
+    <form>
+    <div style="background:grey;height:20px;text-align: center">MARKLIST
+    </div>
+    <div class="row">
+        <div class="col-sm-6">NAME<p id="nm"></p></div>
+            <div class="col-sm-6">ROLL NO<p id="rno"></p></div><br>
+    </div>
+            <div class="row">
+                    <div class="col-sm-6">SEMESTER<p id="sem"></p></div>
+                     <div class="col-sm-6">COLLEGE <p id="clg"></p></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+        <table class="table">
+                <tr><td> SUBJECT</td>
+                    <td>MARK</td>
+                    <td>TOTAL MARK</td>
+                    <td>GRADE</td>
+                    
+                </tr>
+                <tr><td><p id="Sub1"></p></td>
+                <td><p id="M1"></p></td>
+                <td><p id="T1"></p></td>
+                <td><p id="G1"></p></td></tr>
+                    <tr><td><p id="Sub2"></td></p>
+                    <td><p id="M2"></p></td>
+                <td><p id="T2"></p></td>
+                <td><p id="G2"></p></td>
+            </tr>
+                        <tr><td><p id="Sub3"></td></p>
+                        <td><p id="M3"></p></td>
+                <td><p id="T3"></p></td>
+                <td><p id="G3"></p></td></tr>
+                            <tr><td><p id="Sub4"></td></p>
+                            <td><p id="M4"></p></td>
+                <td><p id="T4"></p></td>
+                <td><p id="G4"></p></td></tr><br>
+            </table>
+            <div class="row">
+                SEMESTER STATUS <p id="G"></p>
+            </div>
+        </div>
+        </div>
+    </div>
+</form>
+</div>
+</body>
+</html>

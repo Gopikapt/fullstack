@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block mycontent %}
+<div class="jumbotron"><b>CONTACT DETAILS</b></div>
+<form method="POST" action="/send">
+    <div class="row">
+        <div class="col-sm-6"><input type="text" class="form control" placeholder="NAME" name="name"></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-6"><input type="text" class="form control" placeholder="EMAIL" name="email"></div>
+    </div><br>
+    <div class="row">
+            <div class="col-sm-6"><input type="number" class="form control" placeholder="MOBILE" name="mobile"></div>
+    </div><br>
+    <div class="row">
+            <div class="col-sm-6"><input type="text" class="form control" placeholder="SUBJECT" name="sub"></div>
+    </div><br>
+    <div class="row">
+            <div class="col-sm-6"><textarea class="form control" placeholder="MESSAGE" name="msg"></textarea></div>
+    </div><br>
+    <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6"><input type="submit" VALUE="CONTACT US" class="btn-warning" name="submit"></div>
+    </div>
+</form>
+{% endblock %}
